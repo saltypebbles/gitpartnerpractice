@@ -25,13 +25,9 @@ public class GitPractice
 	public static int find(int n)
 	{
 		for (int i = 0; i<n; i++)
-		{
 			for (int j = 0; j<n; j++)
-			{
-				if (arr[j][i] %2 == 0)
+				if (arr[j][i] %2 == 0 && !(i-1 < 0) && !(i+1 >= n) && arr[j][i+1]+arr[j][i-1] > 17)
 					return arr[j][i];
-			}
-		}
 		return -1;
 	}
 }

@@ -11,17 +11,27 @@ public class GitPractice
 		System.out.print("Enter a number: ");
 		int num = reader.nextInt();
 		squareArray(num);
+		System.out.println(find(num));
 	}
 
 	public static void squareArray(int n)
 	{
 		arr = new int[n][n];
 		for (int i = 0; i<n; i++)
+			for (int j = 0; j<n; j++)
+				arr[i][j] = (int)(Math.random()*10)+1;
+	}
+
+	public static int find(int n)
+	{
+		for (int i = 0; i<n; i++)
 		{
 			for (int j = 0; j<n; j++)
 			{
-				arr[i][j] = (int)(Math.random()*10)+1;
+				if (arr[j][i] %2 == 0)
+					return arr[j][i];
 			}
 		}
+		return -1;
 	}
 }

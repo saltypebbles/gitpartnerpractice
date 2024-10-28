@@ -26,7 +26,7 @@ public class GitPractice
 	{
 		for (int i = 0; i<n; i++)
 			for (int j = 0; j<n; j++)
-				if (arr[j][i] %2 == 0 && !(i-1 < 0) && !(i+1 >= n) && arr[j][i+1]+arr[j][i-1] > 17)
+				if (arr[j][i] %2 == 1 && !(i-1 < 0) && !(i+1 >= n) && !(j-1 < 0) && !(j+1 >= n)  && arr[j][i+1]+arr[j][i-1]+arr[j+1][i]+arr[j+1][i] > 33)
 					return arr[j][i];
 		return -1;
 	}
